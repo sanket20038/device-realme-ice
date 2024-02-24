@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/ice/device.mk)
 
 # Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
 # Environment Flags
 TARGET_FACE_UNLOCK_SUPPORTED := true
@@ -22,7 +22,7 @@ TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 #Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := aosp_ice
+PRODUCT_NAME := afterlife_ice
 PRODUCT_DEVICE := ice
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -39,3 +39,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
 BUILD_FINGERPRINT := realme/RMX3461/RE54BFL1:13/TP1A.220905.001/R.1119f23-59b8-59b9:user/release-keys
+
+AFTERLIFE_GAPPS := true
+AFTERLIFE_MAINTAINER := SANKETP
+USE_PIXEL_CHARGING := true
+TARGET_SUPPORTS_TOUCHGESTURES := true
